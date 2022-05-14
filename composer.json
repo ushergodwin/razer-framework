@@ -1,0 +1,38 @@
+{
+    "name": "ushergodwin/razer",
+    "description": "Razer MVC is a PHP framewrok that provides a convenient MVC (Model View Controller) structure for robust systems development",
+    "keywords": ["bluefaces", "razer", "php", "sql", "raser"],
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "files": [
+            "src/Razer/helpers.php"
+        ],
+        "psr-4": {
+            "Razer\\": "src/Razer/"
+        }
+    },
+    "authors": [{
+        "name": "ushergodwin",
+        "email": "godwintumuhimbise96@gmail.com"
+    }],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">= 7.4",
+        "ext-pdo": "*",
+        "jenssegers/blade": "^1.4",
+        "larapack/dd": "^1.1",
+        "league/booboo": "^2.1",
+        "opis/closure": "^3.6",
+        "phpmailer/phpmailer": "^6.5",
+        "vlucas/phpdotenv": "^5.3"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0|^7.0"
+    }
+}
