@@ -8,7 +8,19 @@ use Razer\Http\Response\Response;
 use Razer\Password\Password;
 use Razer\Views\Views;
 
-$dotenv = Dotenv\Dotenv::createImmutable(dirname( __DIR__));
+function dotEnvPath()
+{
+    $base_path = $_SERVER['DOCUMENT_ROOT'];
+
+    if (strpos($base_path, 'public') !== false) {
+        $base_path = str_replace('public', '', $_SERVER['DOCUMENT_ROOT']);
+        $base_path = substr($base_path, 0, strlen($base_path) - 1);
+    }
+
+    return $base_path;
+}
+
+$dotenv = Dotenv\Dotenv::createImmutable(dotEnvPath());
 $dotenv->safeLoad();
 
 //exception handling
