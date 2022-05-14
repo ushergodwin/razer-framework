@@ -117,8 +117,8 @@ class Route
             $resource::put($name, [$controller, 'update'])->name($name."."."index");
             $resource::post($name.'/store', [$controller, 'store'])->name($name."."."store");
         }
-        $resource::get($name.'/{id}/edit', [$controller, 'edit'])->name($name.".$1"."edit");
-        $resource::get($name.'/{id}', [$controller, 'show'])->name($name.".$1"."show");
+        $resource::get($name.'/{id}/edit', [$controller, 'edit'])->name($name."."."edit");
+        $resource::get($name.'/{id}', [$controller, 'show'])->name($name."."."show");
         $resource::delete($name.'/{id}', [$controller, 'destroy'])->name($name."."."destroy");
         if(is_callable($appendURI))
         {

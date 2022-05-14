@@ -1,5 +1,5 @@
 {
-    "name": "ushergodwin/razer",
+    "name": "ushergodwin/razer-framework",
     "description": "Razer MVC is a PHP framewrok that provides a convenient MVC (Model View Controller) structure for robust systems development",
     "keywords": ["bluefaces", "razer", "php", "sql", "raser"],
     "type": "library",
